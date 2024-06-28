@@ -58,6 +58,8 @@ public:
     QDialogButtonBox *buttonBox;
     QTableView *user_list;
     QLabel *imageLabel_2;
+    QPushButton *Lecteur;
+    QLineEdit *UID;
     QWidget *tab_3;
     QTableView *user_list_2;
     QLabel *imageLabel;
@@ -90,7 +92,7 @@ public:
     {
         if (MainPage->objectName().isEmpty())
             MainPage->setObjectName("MainPage");
-        MainPage->resize(1011, 479);
+        MainPage->resize(1171, 528);
         centralwidget = new QWidget(MainPage);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -101,7 +103,7 @@ public:
         tab->setObjectName("tab");
         groupBox = new QGroupBox(tab);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(9, 9, 971, 178));
+        groupBox->setGeometry(QRect(9, 9, 1131, 181));
         verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
@@ -185,20 +187,26 @@ public:
 
         user_list = new QTableView(tab);
         user_list->setObjectName("user_list");
-        user_list->setGeometry(QRect(9, 193, 551, 187));
+        user_list->setGeometry(QRect(9, 193, 701, 187));
         imageLabel_2 = new QLabel(tab);
         imageLabel_2->setObjectName("imageLabel_2");
-        imageLabel_2->setGeometry(QRect(580, 190, 381, 191));
+        imageLabel_2->setGeometry(QRect(750, 190, 381, 191));
         imageLabel_2->setFrameShape(QFrame::Panel);
+        Lecteur = new QPushButton(tab);
+        Lecteur->setObjectName("Lecteur");
+        Lecteur->setGeometry(QRect(10, 400, 75, 24));
+        UID = new QLineEdit(tab);
+        UID->setObjectName("UID");
+        UID->setGeometry(QRect(100, 400, 113, 22));
         tabWidget->addTab(tab, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
         user_list_2 = new QTableView(tab_3);
         user_list_2->setObjectName("user_list_2");
-        user_list_2->setGeometry(QRect(410, 110, 521, 51));
+        user_list_2->setGeometry(QRect(410, 110, 621, 61));
         imageLabel = new QLabel(tab_3);
         imageLabel->setObjectName("imageLabel");
-        imageLabel->setGeometry(QRect(20, 110, 331, 261));
+        imageLabel->setGeometry(QRect(20, 110, 331, 281));
         imageLabel->setFrameShape(QFrame::Panel);
         layoutWidget = new QWidget(tab_3);
         layoutWidget->setObjectName("layoutWidget");
@@ -228,7 +236,7 @@ public:
 
         groupBox_2 = new QGroupBox(tab_3);
         groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(410, 180, 521, 201));
+        groupBox_2->setGeometry(QRect(410, 190, 621, 201));
         verticalLayout_4 = new QVBoxLayout(groupBox_2);
         verticalLayout_4->setObjectName("verticalLayout_4");
         horizontalLayout_5 = new QHBoxLayout();
@@ -312,7 +320,7 @@ public:
         MainPage->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainPage);
         menuBar->setObjectName("menuBar");
-        menuBar->setGeometry(QRect(0, 0, 1011, 22));
+        menuBar->setGeometry(QRect(0, 0, 1171, 22));
         MainPage->setMenuBar(menuBar);
         statusbar = new QStatusBar(MainPage);
         statusbar->setObjectName("statusbar");
@@ -320,7 +328,7 @@ public:
 
         retranslateUi(MainPage);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainPage);
@@ -338,6 +346,7 @@ public:
         checkBox_3->setText(QCoreApplication::translate("MainPage", "Acc\303\250s niveau 3", nullptr));
         ajouter->setText(QCoreApplication::translate("MainPage", "Ajouter une photo", nullptr));
         imageLabel_2->setText(QString());
+        Lecteur->setText(QCoreApplication::translate("MainPage", "Lecteur", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainPage", "Gestion", nullptr));
         imageLabel->setText(QString());
         btn_supprimer->setText(QCoreApplication::translate("MainPage", "Supprimer", nullptr));
